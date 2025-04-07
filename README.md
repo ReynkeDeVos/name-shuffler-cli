@@ -4,9 +4,7 @@
 
 > **Note:** This project is vibe coded:
 >
-> ```text
 > Vibe Level: [███████████████▒▒▒▒▒] ~75%
-> ```
 
 ## ⚡ Demo
 
