@@ -2,7 +2,7 @@
 
 🔀 A modern CLI tool that shuffles names randomly into groups.
 
-> **Note:** This project is vibe coded:
+> **Note:** This project is partially vibe coded / LLM generated:
 >
 > Vibe Level: [███████████████▒▒▒▒▒] ~75%
 
