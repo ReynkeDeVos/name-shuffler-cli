@@ -51,20 +51,7 @@ Then follow the prompts:
 2. Specify the number of groups you want
 3. See the randomly generated groups!
 
-<div style="
-  border: 2px solid #333;
-  border-radius: 6px;
-  padding: 8px;
-  display: inline-block;
-  text-align: center;
-  font-weight: bold;
-  font-family: monospace;
-  margin: 10px 0;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  min-width: 200px;
-">
-  🎲 Random Group Time!
-</div>
+> ### 🎲 Random Group Time!
 
 ## 📋 Requirements
 
