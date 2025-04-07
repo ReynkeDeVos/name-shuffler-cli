@@ -4,7 +4,7 @@
 
 > **Note:** This project is vibe coded:
 >
-> ```bash
+> ```text
 > Vibe Level: [███████████████▒▒▒▒▒] ~75%
 > ```
 
