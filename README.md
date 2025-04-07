@@ -51,7 +51,7 @@ Then follow the prompts:
 2. Specify the number of groups you want
 3. See the randomly generated groups!
 
-> ### 🎲 Random Group Time!
+### 🎲 Random Group Time!
 
 ## 📋 Requirements
 
