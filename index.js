@@ -3,13 +3,14 @@
 import boxen from "boxen";
 import chalk from "chalk";
 import figlet from "figlet";
-import gradient from "gradient-string";
+import { pastel } from "gradient-string";
 import inquirer from "inquirer";
+// import gradient from "gradient-string"; For future references! I like it!
 import ora from "ora";
 import { setTimeout } from "timers/promises";
 
 // Display the application title with ASCII art and gradient colors
-function displayTitle() {
+async function displayTitle() {
   console.clear();
 
   const title = figlet.textSync("Name Shuffler", {
@@ -18,7 +19,11 @@ function displayTitle() {
     verticalLayout: "default",
   });
 
-  console.log(gradient.pastel.multiline(title));
+  // Use rainbow gradient with modern import approach
+  console.log(pastel.multiline(title));
+  
+  // Add a small delay for effect
+  await setTimeout(500);
 }
 
 // Fisher-Yates shuffle algorithm for randomizing array elements
@@ -151,8 +156,8 @@ function displayGroups(groups) {
 
 // Main application flow
 async function main() {
-  displayTitle();
-
+  await displayTitle();
+  
   // Collect names from user input
   const { namesInput } = await inquirer.prompt([
     {
@@ -180,12 +185,12 @@ async function main() {
     .split(",")
     .map((name) => name.trim())
     .filter(Boolean);
-
+  
   // Visual feedback while processing
   const nameSpinner = ora("Processing names...").start();
   await setTimeout(500);
   nameSpinner.succeed(`${chalk.green(names.length)} names received!`);
-
+  
   // Desired number of groups
   const { numberOfGroups } = await inquirer.prompt([
     {
