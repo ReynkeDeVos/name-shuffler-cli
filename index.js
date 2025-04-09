@@ -5,7 +5,6 @@ import chalk from "chalk";
 import figlet from "figlet";
 import { pastel } from "gradient-string";
 import inquirer from "inquirer";
-// import gradient from "gradient-string"; For future references! I like it!
 import ora from "ora";
 import { setTimeout } from "timers/promises";
 
