@@ -9,6 +9,16 @@ import inquirer from "inquirer";
 import ora from "ora";
 import { setTimeout } from "timers/promises";
 
+// Function to handle graceful exit
+function exitGracefully() {
+  console.clear();
+  console.log(pastel.multiline('\nThank you for using Name Shuffler! Goodbye! 👋\n'));
+  process.exit(0);
+}
+
+// Handle CTRL+C gracefully
+process.on('SIGINT', exitGracefully);
+
 // Display the application title with ASCII art and gradient colors
 async function displayTitle() {
   console.clear();
@@ -233,6 +243,11 @@ async function main() {
 
 // Starts the application and handle any errors
 main().catch((error) => {
+  // Don't show error for ExitPromptError (CTRL+C during prompt)
+  if (error.name === 'ExitPromptError') {
+    exitGracefully();
+  }
+  
   console.error(chalk.red("An error occurred:"), error);
   process.exit(1);
 });
