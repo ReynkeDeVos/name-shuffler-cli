@@ -8,6 +8,8 @@ import ora from "ora";
 import { pastel } from "gradient-string";
 import { setTimeout } from "timers/promises";
 
+// This is a test
+
 // Function to handle graceful exit
 function exitGracefully() {
   console.clear();
